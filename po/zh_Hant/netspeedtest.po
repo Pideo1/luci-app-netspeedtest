@@ -208,3 +208,87 @@ msgstr "librespeed 站點測速"
 
 #~ msgid "Use Ookla® SpeedTest-CLI"
 #~ msgstr "使用 Ookla® SpeedTest-CLI"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:58
+msgid "ASN: AS%s"
+msgstr "ASN: AS%s"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:57
+msgid "ASN organization: %s"
+msgstr "ASN組織: %s"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:53
+msgid "Avg download: %s Mbps"
+msgstr "平均下載: %s Mbps"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:54
+msgid "Avg upload: %s Mbps"
+msgstr "平均上傳: %s Mbps"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:59
+msgid "City: %s"
+msgstr "City: %s"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:117
+msgid "Cloudflare SpeedTest"
+msgstr "Cloudflare 測速"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:188
+msgid "Cloudflare SpeedTest CLI Status"
+msgstr "Cloudflare SpeedTest CLI 狀態"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:208
+msgid "Detailed text result"
+msgstr "文字結果展示"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:243
+msgid "Download Cloudflare SpeedTest CLI"
+msgstr "下載 Cloudflare SpeedTest CLI"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:213
+msgid "Enabled: text result with details; Disabled: image result with speed and latency only"
+msgstr "開啟：文字(展示內容多)；關閉：圖片(只展示速度延遲)"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:17
+msgid "Fairly good"
+msgstr "比較好"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:16
+msgid "Good"
+msgstr "好"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:55
+msgid "Idle latency: %s ms"
+msgstr "空閒延遲: %s ms"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:60
+msgid "IP address: %s"
+msgstr "IP位址: %s"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:56
+msgid "Jitter: %s ms"
+msgstr "波動: %s ms"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:63
+msgid "Network quality: %s (%s)"
+msgstr "網路評價: %s (%s)"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:19
+msgid "Rather bad"
+msgstr "比較爛"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:61
+msgid "Region: %s"
+msgstr "地區: %s"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:239
+msgid "Release tag (optional)"
+msgstr "指定 tag（可選）"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:62
+msgid "STUN UDP packet loss: %s%%"
+msgstr "STUN UDP丟包率: %s%%"
+
+#: htdocs/luci-static/resources/view/netspeedtest/cloudflare.js:20
+msgid "Very bad"
+msgstr "稀爛"

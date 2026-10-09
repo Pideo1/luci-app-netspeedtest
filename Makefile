@@ -7,7 +7,7 @@ include $(TOPDIR)/rules.mk
 LUCI_NAME:=luci-app-netspeedtest
 
 LUCI_TITLE:=LuCI Net Speedtest
-LUCI_DEPENDS:=+iperf3 +librespeed-go +ca-certificates +curl
+LUCI_DEPENDS:=+iperf3 +librespeed-go +ca-certificates +curl +xz
 
 LUCI_DESCRIPTION:=Test Net speed
 
