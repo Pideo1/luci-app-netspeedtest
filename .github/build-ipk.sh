@@ -30,6 +30,7 @@ fi
 [ -n "$PKG_VERSION" ] || PKG_VERSION="$PKG_SOURCE_DATE_EPOCH~$(git -C "$PKG_DIR" rev-parse --short HEAD)"
 
 PKG_DEPENDS="$(get_mk_value "LUCI_DEPENDS" | sed 's/+//g;s/ \+/, /g')"
+PKG_DEPENDS_APK="$(echo "$PKG_DEPENDS" | tr -d ',' | xargs)"
 PKG_DESCRIPTION="$(get_mk_value "LUCI_DESCRIPTION")"
 PKG_MAINTAINER="$(get_mk_value "PKG_MAINTAINER")"
 
@@ -126,7 +127,7 @@ default_prerm' > "$TEMP_DIR/pre-deinstall"
 		--script "post-install:$TEMP_DIR/post-install" \
 		--script "post-upgrade:$TEMP_DIR/post-upgrade" \
 		--script "pre-deinstall:$TEMP_DIR/pre-deinstall" \
-		--info "depends:$PKG_DEPENDS" \
+		--info "depends:$PKG_DEPENDS_APK" \
 		--files "$TEMP_PKG_DIR" \
 		--output "$TEMP_DIR/${PKG_NAME}_${PKG_VERSION}.apk"
 
