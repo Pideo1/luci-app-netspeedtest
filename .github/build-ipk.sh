@@ -58,8 +58,16 @@ cat > "$TEMP_PKG_DIR/lib/upgrade/keep.d/$PKG_NAME" <<-EOF
 /etc/config/netspeedtest
 EOF
 
-po2lmo "$PKG_DIR/po/zh_Hans/$PKG_NAME.po" "$TEMP_PKG_DIR/usr/lib/lua/luci/i18n/$PKG_NAME.zh-cn.lmo"
-po2lmo "$PKG_DIR/po/zh_Hant/$PKG_NAME.po" "$TEMP_PKG_DIR/usr/lib/lua/luci/i18n/$PKG_NAME.zh-tw.lmo"
+for po in "$PKG_DIR"/po/*/*.po; do
+	[ -f "$po" ] || continue
+	lang_dir="$(basename "$(dirname "$po")")"
+	case "$lang_dir" in
+		zh_Hans) lc="zh-cn" ;;
+		zh_Hant) lc="zh-tw" ;;
+		*)       lc="$(echo "$lang_dir" | tr '_' '-')" ;;
+	esac
+	po2lmo "$po" "$TEMP_PKG_DIR/usr/lib/lua/luci/i18n/$(basename "$po" .po).$lc.lmo"
+done
 
 if [ "$PKG_MGR" == "apk" ]; then
 	find "$TEMP_PKG_DIR" -type f,l -printf '/%P\n' | sort > "$TEMP_PKG_DIR/lib/apk/packages/$PKG_NAME.list"
